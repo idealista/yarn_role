@@ -1,0 +1,11 @@
+---
+
+# Yarn
+yarn_dependencies:
+  - apt-transport-https
+yarn_force_reinstall: false
+yarn_apt_gpg: https://dl.yarnpkg.com/debian/pubkey.gpg
+yarn_apt_source: "deb https://dl.yarnpkg.com/debian/ stable main"
+yarn_name: yarn
+yarn_version: 1.22.17
+yarn_version_id: 1

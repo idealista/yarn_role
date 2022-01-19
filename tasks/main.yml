@@ -1,0 +1,12 @@
+---
+
+- name: Yarn | Check
+  import_tasks: check.yml
+  tags:
+    - install
+
+- name: Yarn | Install
+  import_tasks: install.yml
+  tags:
+    - yarn
+  when: yarn_force_reinstall or not yarn_is_installed or yarn_new_version

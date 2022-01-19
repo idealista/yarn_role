@@ -1,0 +1,4 @@
+---
+
+yarn_apt_gpg: https://dl.yarnpkg.com/debian/pubkey.gpg
+yarn_apt_source: "deb https://dl.yarnpkg.com/debian/ stable main"

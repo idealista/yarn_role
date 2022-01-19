@@ -1,0 +1,27 @@
+---
+
+- name: Yarn | Install dependencies
+  apt:
+    name: "{{ yarn_dependencies }}"
+    state: present
+    update_cache: yes
+    install_recommends: no
+
+- name: Yarn | add apt-key
+  apt_key:
+    url: "{{ yarn_apt_gpg }}"
+    state: present
+
+- name: Yarn | add repository
+  apt_repository:
+    repo: "{{ yarn_apt_source }}"
+    state: present
+    filename: yarn
+    update_cache: yes
+
+- name: Yarn | Install
+  apt:
+    name: "{{ yarn_name }}={{ yarn_version }}-{{ yarn_version_id }}"
+    state: present
+    update_cache: yes
+    install_recommends: no

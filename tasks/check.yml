@@ -1,0 +1,15 @@
+---
+
+- name: Yarn | Check if Yarn is installed and which version
+  command: yarn --version
+  register: yarn_command_output
+  changed_when: false
+  failed_when: false
+
+- name: Yarn | Set installed fact
+  set_fact:
+    yarn_is_installed: "{% if yarn_command_output.stdout is defined %}True{% else %}False{% endif %}"
+
+- name: Yarn | Set new version fact
+  set_fact:
+    yarn_new_version: "{% if yarn_command_output.stdout is defined and yarn_command_output.stdout != yarn_version %}True{% else %}False{% endif %}"

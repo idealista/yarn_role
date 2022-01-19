@@ -1,0 +1,6 @@
+---
+
+- src: https://github.com/idealista/nodejs_role.git
+  scm: git
+  version: 1.2.0
+  name: idealista.nodejs_role
