@@ -2,7 +2,7 @@
 
 # Yarn Ansible role
 
-[![Build Status](https://travis-ci.com/idealista/yarn_role.png)](https://travis-ci.com/idealista/yarn_role)
+[![Build Status](https://api.travis-ci.com/repos/idealista/yarn_role.png?branch=master)](https://travis-ci.com/github/idealista/yarn_role)
 
 This Ansible role installs Yarn in a Debian environment.
 
